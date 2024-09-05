@@ -17,5 +17,5 @@ This repository contains two Ruby scripts that analyze weather and soccer data.
    ```bash
    cd /path/to/your_project_directory
 3. **Run the Ruby script using the following command:**
-    ruby soccer_analysis.rb
-    ruby weather_analysis.rb
+   - ruby soccer_analysis.rb
+   - ruby weather_analysis.rb

@@ -15,11 +15,9 @@ begin
     team_goals_for = columns[6].to_i
     team_goals_against = columns[8].to_i
 
-    # Calculate goal difference
-    difference = (team_goals_for - team_goals_against).abs
+    difference = team_goals_for - team_goals_against
 
-    # Update if this is the smallest difference so far
-    if difference < smallest_difference
+    if difference.abs < smallest_difference.abs
       smallest_difference = difference
       team_with_smallest_difference = team_name
       goals_for = team_goals_for
@@ -28,7 +26,7 @@ begin
   end
 
   if team_with_smallest_difference
-    puts "The team with smallest goal differencen is: `#{team_with_smallest_difference}`."
+    puts "The team with the smallest goal difference is: `#{team_with_smallest_difference}`."
     puts "Goals for: #{goals_for}, Goals against: #{goals_against}, Difference: #{smallest_difference}"
   else
     puts "No valid data found in the file."

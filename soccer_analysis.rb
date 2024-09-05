@@ -8,7 +8,6 @@ begin
   goals_against = 0
 
   data.each do |line|
-    # Split the line and extract relevant data
     columns = line.split
     next if columns.length < 10 # Skip lines that don't have enough columns
 
@@ -29,7 +28,7 @@ begin
   end
 
   if team_with_smallest_difference
-    puts "Team with smallest goal difference: `#{team_with_smallest_difference}`."
+    puts "The team with smallest goal differencen is: `#{team_with_smallest_difference}`."
     puts "Goals for: #{goals_for}, Goals against: #{goals_against}, Difference: #{smallest_difference}"
   else
     puts "No valid data found in the file."
